@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+<!-- title and meta -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="description" content="A simple responsive navigation menu using HTML, CSS, and a bit of jQuery." />
+<title>Simple Responsive Navigation Menu</title>
+    
+<!-- css -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/style.css" />
+    
+<!-- js -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#nav-mobile").html($("#nav-main").html());
+        $("#nav-trigger span").click(function(){
+            if ($("nav#nav-mobile ul").hasClass("expanded")) {
+                $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+                $(this).removeClass("open");
+            } else {
+                $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+                $(this).addClass("open");
+            }
+        });
+    });
+</script>
+
+
+</head>
+
+
+
+<body>
+
+<div id="wrapper">
+
+<div id="top-bar">
+    <div class="container clearfix">
+        <nav id="nav-main">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Code</a></li>
+                <li><a href="">Learn</a></li>
+                <li><a href="">Review</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <nav id="nav-mobile"></nav>
+    </div>
+</div><!-- /#top-bar -->
+
+<header>
+    <div id="title" class="container">
+        <h1>CodeAloud</h1>
+    </div>
+</header><!-- /header -->
+
+
+<div id="main">
+    <div class="container">
+        <div id="nav-trigger">
+            <span>Menu</span>
+        </div>
+        
+
+        <section>
+            <h1>Hello World</h1>
+            <p>Code What You Think<br>
+When Online Judges give a problem, we give you the solution.
+<br>
+Code Aloud teaches you the (............ )(Talks about having algos nd interview expeinece required by young coders)
+
+</p>
+<div><hr>
+<div class="one-half column">
+          <a href="#">
+            <h4>ALGORITHMS</h4>
+           <!-- <span class="fa fa-picture-o"></span> -->
+            <p></p></a><ul><a href="#">
+            </a><li><a href="#"></a><a href="#">Sorting</a></li>
+            <li><a href="#">Dynamic Programmming</a></li>
+            <li><a href="#">Bit manipulation</a></li>
+            <li><a href="#">Greedy </a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Game theory</a></li>
+          </ul>
+        </div><hr>
+<div class="one-half column">
+          <a href="#">
+            <h4>PROGRAMMING LANGUAGES</h4>
+            <!--<span class="fa fa-leaf"></span> -->
+            <p> </p></a><ul><a href="#">
+            </a><li><a href="#"></a><a href="#">C / C++</a></li>
+            <li><a href="#">JAVA</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Python</a></li>
+            
+          </ul> <p></p>
+          
+        </div>
+
+</div>
+
+        </section>
+    </div>
+<div class="container">
+<div class="contact">Hi! Add more relevant details here</div>
+</div>
+</div><!-- #main -->
+
+
+<footer><div class="container">
+<span style="color:white;">&copy; 2015 | All Rights Reserved</span></div>
+</footer><!-- /footer -->
+
+
+
+</div><!-- /#wrapper -->
+
+
+</body>
+</html>
